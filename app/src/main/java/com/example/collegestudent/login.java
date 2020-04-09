@@ -35,10 +35,12 @@ public class login extends AppCompatActivity implements View.OnClickListener {
     {
         if(user.getText().toString().equalsIgnoreCase("student1") && pass.getText().toString().equals("123456"))
         {
-            Intent intent = new Intent(login.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
         else
             Toast.makeText(getApplicationContext(),"Invalid username or password",Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
